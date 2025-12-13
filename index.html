@@ -2,7 +2,10 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Acesso Liberado</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Chat Privado</title>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -17,74 +20,94 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 
 fbq('init', '818826874479120');
 fbq('track', 'PageView');
-fbq('track', 'Lead');
 </script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=818826874479120&ev=PageView&noscript=1"/>
-</noscript>
 <!-- End Meta Pixel Code -->
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.card {
-    background: #ffffff;
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.container {
+    background: #111;
+    width: 100%;
     max-width: 420px;
-    width: 90%;
-    padding: 32px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 35px 25px;
+    border-radius: 18px;
     text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,.6);
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e60000;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 12px;
 }
 
 p {
     font-size: 16px;
-    color: #555;
-    margin-bottom: 28px;
+    opacity: 0.9;
+    margin-bottom: 25px;
 }
 
 button {
     width: 100%;
-    padding: 16px;
+    padding: 18px;
     font-size: 18px;
-    background: #0088cc;
+    background: linear-gradient(135deg, #e60000, #b80000);
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
+    font-weight: bold;
+    transition: transform .2s, box-shadow .2s;
 }
 
 button:hover {
-    background: #0077b3;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(230,0,0,.4);
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
-    <h1>Acesso Liberado ✅</h1>
-    <p>Clique no botão abaixo para iniciar a conversa no Telegram.</p>
+<div class="container">
+    <img src="avatar.png" alt="Avatar" class="avatar">
 
-    <button onclick="window.location.href='https://t.me/Viccastrofbbot'">
-        Iniciar Conversa no Telegram
-    </button>
+    <h1>Vem conversar comigo no PV bb</h1>
+    <p>Atendimento privado, direto no Telegram.</p>
+
+    <button onclick="abrirChat()">Abrir Chat Privado</button>
 </div>
+
+<script>
+function abrirChat() {
+    fbq('track', 'Contact');
+    setTimeout(function(){
+        window.location.href = "https://t.me/Viccastrofbbot";
+    }, 300);
+}
+</script>
 
 </body>
 </html>
